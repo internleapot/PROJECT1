@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <style>
+       .white-card{
+            position: absolute;
+            top: 230px;
+            left: 550px;
+            width: 350px;
+            height: 250px;
+            background-color: white;
+            border: 2px solid black;
+       } 
+       .many{
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: black;
+            font-family: Abhaya Libre; 
+       }
+       #enter{
+            position: absolute;
+            top: 110px;
+            left: 20px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+       }
+       .btn-success{
+            position: absolute;
+            top: 190px;
+            left: 230px;
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: #1C49EA !important;
+            border-radius: 25px;
+            font-size: 0.20in;
+            text-decoration: none;
+            text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="white-card">
+          <h2 class="many">Employee's username</h2> 
+          <input type="text" id="enter" name="enter">
+          <button type="button" class="btn btn-success">Save</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+{% endblock %}  

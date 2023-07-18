@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<style>
+.white-card{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    height: 730px;
+    width: 800px;
+    border: 1px solid black;
+    background-color: white;
+}
+.sign{
+    position: absolute;
+    top: 40px;
+    left: 350px;
+    color: black;
+    font-family: 'Barlow';
+}
+.icons{
+    position: absolute;
+    top: 110px;
+    left: 280px;
+    font-size: 30px;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+.facebook{
+    color: #0165E1;
+}
+.twitter{
+    color: #1D9BF0;
+    background-color: white;
+}
+.linkedin{
+    color: #0A66C2;
+}
+.or{
+    position: absolute;
+    top: 160px;
+    left: 360px;
+    color: black;
+    font-family: 'Barlow';  
+}
+.email{
+    position: absolute;
+    top: 270px;
+    left: 100px;
+    color: black;
+    font-family: Inter;
+}
+#yemail{
+    position: absolute;
+    top: 330px;
+    left: 100px;
+    width: 400px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    resize: vertical;
+}
+.pass{
+    position: absolute;
+    top: 370px;
+    left: 100px;
+    color: black;
+    font-family: Inter; 
+}
+#pass{
+    position: absolute;
+    top: 430px;
+    left: 100px;
+    width: 400px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    resize: vertical; 
+}
+.btn-light{
+    position: absolute;
+    top: 550px;
+    left: 350px;
+    height: 60px;
+    width: 120px;
+    color: black;
+    background-color: #1C49EA !important;
+    border-radius: 25px;
+    font-size: 0.25in;
+    text-decoration: none;
+}
+.have{
+    position: absolute;
+    top: 645px;
+    left: 60px;
+    color: black;
+    font-family: Inter; 
+    font-size: 0.20in;
+}
+.now{
+    position: absolute;
+    top: 670px;
+    left: 230px;
+    font-family: Inter; 
+    text-decoration: none;
+    font-size: 0.20in;
+}
+.forgot{
+    position: absolute;
+    top: 670px;
+    left: 600px;
+    font-family: Inter; 
+    text-decoration: none;
+    font-size: 0.20in; 
+}
+.yel-card{
+    position: absolute;
+    top: 700px;
+    height: 300px;
+    width: 100%;
+    color: white;
+}
+</style>
+<body>
+    <div class="card">
+        <div class="white-card">
+          <h2 class="sign"><b>Sign In</b></h2>
+            <div class="icons">
+                <ion-icon class="facebook" name="logo-facebook"></ion-icon>
+                <ion-icon class="twitter" name="logo-twitter"></ion-icon>
+                <ion-icon class="linkedin" name="logo-linkedin"></ion-icon>
+                <ion-icon class="google" name="logo-google"></ion-icon>
+                <ion-icon name="logo-apple"></ion-icon>
+            </div>
+            <h3 class="or">-OR-</h3>
+            <h2 class="email">Email</h2>
+            <input type="text" id="yemail" name="enteremail" >
+            <h2 class="pass">Password</h2>
+            <input type="password" id="pass" name="enptpass" >
+            <form method="post">
+            <a class="btn btn-light" href="/maindashboard"> Sign In </a>
+            <h4 class="have">Don't have account?</h4>
+            <a class="now" href=""> Sign In Now</a>
+            <a class="forgot" href=""> Forgot Password</a>
+        </div>
+    </div>
+    <div class="card">
+       <div class="yel-card">
+         </div>
+       </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

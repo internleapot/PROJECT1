@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <style>
+        .blue-card{
+            position: absolute;
+            height: 90px;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            background-color: #1C49EABD;
+        }
+        .greyone-card{
+            position: absolute;
+            height: 700px;
+            width: 100%;
+            top: 90px;
+            left: 0px;
+            background-color: #E8EBF6;
+        }
+        .not{
+            position: absolute;
+            top: 0px;
+            left: 680px;
+            color: #1C49EA;
+            font-family: 'Inter';
+            font-size: 0.35in;
+        }
+        .table-class{
+            position: absolute;
+            top: 100px;
+            left: 500px;
+            color: black;
+            height: 80px;
+            width: 500px;
+            background-color: white;
+            font-size: 0.15in;
+        }
+        .header-class{
+            border: 1px solid black;
+            padding: 15px;
+            color: black;
+        }
+        .data-class{
+            border: 1px solid black;
+            padding: 15px;
+            background-color: white; 
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="blue-card">
+        </div>
+    </div>
+    <div class="card">
+        <div class="greyone-card">
+        <p class="not"> Notification </p>
+        <table class="table-class">
+            <thead>
+              <tr>
+                <th class="header-class">Documents</th>
+                <th class="header-class">Date</th>
+                <th class="header-class">Download</th>
+              </tr>
+            </thead>  
+            <tbody>
+                <tr>
+                  <td class="data-class">Scholarship to children of workers who<br> 
+                    are registred in KB&OCWWB</td>
+                  <td class="data-class">27-01-2022</td>
+                  <td class="data-class"><a href="">Download</a></td>
+                </tr>
+
+                <tr>
+                  <td class="data-class">Updating information of beneficiaries<br>
+                     who have not received covid 19 relief<br>
+                    fund</td>
+                  <td class="data-class">27-01-2022</td>
+                  <td class="data-class"><a href="">Download</a></td>
+                  </tr>
+
+                  <tr>
+                    <td class="data-class">Office order Regarding Registration<br>
+                       fund</td>
+                     <td class="data-class">27-01-2022</td>
+                     <td class="data-class"><a href="">Download</a></td>
+                  </tr>
+
+                  <tr>
+                    <td class="data-class">Regarding inclusion of COVID-19 Under<br>
+                         Major ailment Scheme</td>
+                     <td class="data-class">27-01-2022</td>
+                     <td class="data-class"><a href="">Download</a></td>
+                  </tr>
+
+                  <tr>
+                    <td class="data-class">Updating information of beneficiaries<br>
+                         who have not received covid 19 relief<br>
+                        fund share details before 31-01-2022</td>
+                     <td class="data-class">27-01-2022</td>
+                     <td class="data-class"><a href="">Download</a></td>
+                  </tr>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,558 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+         .blue-card{
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            background-color: #1C49EABD;
+            left:0px;
+            top: 0px;
+        }
+        .light-card{
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background-color: #BFCDF5;
+            left:0px;
+            top: 100px;
+        }
+        .home{
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            height: 30px;
+            width: 30px;
+        }
+        .one{
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            height: 40px;
+            width: 70px;
+        }
+        .log{
+            position: absolute;
+            top: 5px;
+            left: 1400px;
+            color: white;
+            border: 3px solid black;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .ivory-card{
+            position: absolute;
+            width: 100%;
+            height: 800px;
+            background-color: #F5F5F5;
+            left:0px;
+            top: 150px;
+        }
+        .whiteone-card{
+            position: absolute;
+            width: 200px;
+            height: 600px;
+            background-color: white;
+            left: 0px;
+            top: 0px;  
+        }
+        .peach-card{
+            position: absolute;
+            width: 40px;
+            height: 800px;
+            background-color: #BFCDF5;
+            left: 200px;
+            top: 0px;
+        }
+        .profile{
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none;
+        }
+        .about{
+            position: absolute;
+            top: 55px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .depart{
+            position: absolute;
+            top: 80px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .proj{
+            position: absolute;
+            top: 105px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .emp{
+            position: absolute;
+            top: 130px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .noti{
+            position: absolute;
+            top: 155px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .feed{
+            position: absolute;
+            top: 180px;
+            left: 40px;
+            color: #656565;
+            font-family: Abhaya Libre;
+            text-decoration: none; 
+        }
+        .cim{
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            height: 20px;
+            width: 20px; 
+        }
+        .bout{
+            position: absolute;
+            top: 53px;
+            left: 15px;
+            height: 20px;
+            width: 20px; 
+        }
+        .dept{
+            position: absolute;
+            top: 80px;
+            left: 15px;
+            height: 20px;
+            width: 20px;
+        }
+        .pro{
+            position: absolute;
+            top: 105px;
+            left: 15px;
+            height: 20px;
+            width: 20px;
+        }
+        .empl{
+            position: absolute;
+            top: 130px;
+            left: 15px;
+            height: 20px;
+            width: 20px;
+        }
+        .notifi{
+            position: absolute;
+            top: 155px;
+            left: 15px;
+            height: 20px;
+            width: 20px;
+        }
+        .feedba{
+            position: absolute;
+            top: 180px;
+            left: 15px;
+            height: 20px;
+            width: 20px;
+        }
+        .whitetwo-card{
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            height: 330px;
+            width: 500px;
+            background-color: white;
+        }
+        .whitethree-card{
+            position: absolute;
+            top: 530px;
+            left: 300px;
+            height: 330px;
+            width: 500px;
+            background-color: white;
+        }
+        .comp{
+            position: absolute;
+            top: 30px;
+            left: 150px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.20in;
+        }
+        .cone-card{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .cone{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .ctwo-card{
+            position: absolute;
+            top: 100px;
+            left: 160px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black; 
+        }
+        .ctwo{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .cthree-card{
+            position: absolute;
+            top: 100px;
+            left: 370px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;  
+        }
+        .cthree{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .cfour-card{
+            position: absolute;
+            top: 100px;
+            left: 480px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .cfour{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .cfive-card{
+            position: absolute;
+            top: 210px;
+            left: 350px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .cfive{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        } 
+        .csix-card{
+            position: absolute;
+            top: 210px;
+            left: 460px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }   
+        .csix{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        } 
+        .cseven-card{
+            position: absolute;
+            top: 210px;
+            left: 570px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }   
+        .cseven{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        } 
+        .employee{
+            position: absolute;
+            top: 30px;
+            left: 150px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.20in;
+        }
+        .eone-card{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .eone{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .etwo-card{
+            position: absolute;
+            top: 100px;
+            left: 160px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black; 
+        }
+        .etwo{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .ethree-card{
+            position: absolute;
+            top: 630px;
+            left: 570px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;  
+        }
+        .ethree{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .efour-card{
+            position: absolute;
+            top: 630px;
+            left: 680px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .efour{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .efive-card{
+            position: absolute;
+            top: 740px;
+            left: 350px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .efive{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .esix-card{
+            position: absolute;
+            top: 740px;
+            left: 460px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .esix{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+        .eseven-card{
+            position: absolute;
+            top: 740px;
+            left: 570px;
+            height: 70px;
+            width: 80px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .eseven{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter';
+            font-size: 0.15in;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <div class="blue-card">
+    </div>
+    <div class="card">
+    <div class="light-card">
+        <img class="one" src="{% static 'one.png'%}" />
+        <img class="home" src="{% static 'home.png'%}" />
+        <a class="log" href="">LOGOUT</a>
+    </div>  
+</div>
+<div class="card">
+    <div class="ivory-card">
+        <div class="card">
+            <div class="whiteone-card">
+                <img class="cim" src="{% static 'company.png'%}" />
+                <img class="bout" src="{% static 'about.png'%}" />
+                <img class="dept" src="{% static 'dept.png'%}" />
+                <img class="pro" src="{% static 'proj.png'%}" />
+                <img class="empl" src="{% static 'emp.png'%}" />
+                <img class="notifi" src="{% static 'noti.png'%}" />
+                <img class="feedba" src="{% static 'feed.png'%}" />
+                <a class="profile" href="">Company's Profile</a>
+                <a class="about" href="">About Us</a>
+                <a class="depart" href="/departments">Departments</a>
+                <a class="proj" href="/projects">Projects</a>
+                <a class="emp" href="">Employes</a>
+                <a class="noti" href="">Notification</a>
+               <a class="feed" href="">Feedback</a>
+               <div class="card">
+                <div class="peach-card">
+                    <div class="card">
+                        <div class="whitetwo-card">
+                            <p class="comp">Companies Enrolled</p>
+                            <div class="card">
+                                <div class="cone-card">
+                                  <p class="cone">Company 1</p> 
+                                </div>
+                            </div>
+                            <div class="ctwo-card">
+                                <p class="ctwo">Company 2</p> 
+                              </div>
+                          </div>
+                          <div class="cthree-card">
+                            <p class="cthree">Company 3</p> 
+                          </div>
+                      </div>
+                      <div class="cfour-card">
+                        <p class="cfour">Company 4</p> 
+                      </div>
+                  </div>
+                  <div class="cfive-card">
+                    <p class="cfive">Company 5</p> 
+                  </div>
+              </div>
+              <div class="csix-card">
+                <p class="csix">Company 6</p> 
+              </div>
+            </div>
+            <div class="cseven-card">
+              <p class="cseven">Company 7</p> 
+            </div>
+            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="whitethree-card">
+                            <p class="employee">EmployeesEnrolled</p>
+                            <div class="card">
+                                <div class="eone-card">
+                                  <p class="eone">Employee 1</p> 
+                                </div>
+                            </div>
+                            <div class="etwo-card">
+                                <p class="etwo">Employee 2</p> 
+                              </div>
+                            </div>
+                            <div class="ethree-card">
+                                <p class="ethree">Employee 3</p> 
+                              </div>
+                          </div>
+                          <div class="efour-card">
+                            <p class="efour">Employee 4</p> 
+                          </div>
+                      </div>
+                      <div class="efive-card">
+                        <p class="efive">Employee 5</p> 
+                      </div>
+                  </div>
+                  <div class="esix-card">
+                    <p class="esix">Employee 6</p> 
+                  </div>
+                </div>
+                <div class="eseven-card">
+                    <p class="eseven">Employee 7</p> 
+                  </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock %}  

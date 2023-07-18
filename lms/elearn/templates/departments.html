@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <style>
+    .blue-card{
+        position: absolute;
+        height: 90px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #1C49EABD;
+    }
+    .depa{
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        color: black;
+        font-family: 'Inter';
+    }
+    .add{
+        position: absolute;
+        top: 5px;
+        left: 1250px;
+        color: white;
+        font-family: 'Inter';
+        border: 4px solid black;
+        padding: 10px;
+    }
+    .white-card{
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        height: 1400px;
+        width: 100%;
+        background-color: white;
+    }
+    .engin{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        height: 150px;
+        width: 150px; 
+    }
+    .eng{
+        position: absolute;
+        top: 70px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;
+    }
+    .eninfo{
+        position: absolute;
+        top: 100px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .plum{
+        position: absolute;
+        top: 240px;
+        left: 50px;
+        height: 150px;
+        width: 150px;  
+    }
+    .plumb{
+        position: absolute;
+        top: 260px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;
+    }
+    .plinfo{
+        position: absolute;
+        top: 290px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .carp{
+        position: absolute;
+        top: 430px;
+        left: 50px;
+        height: 150px;
+        width: 150px;   
+    }
+    .car{
+        position: absolute;
+        top: 450px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in; 
+    }
+    .cainfo{
+        position: absolute;
+        top: 480px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in;   
+    }
+    .elec{
+        position: absolute;
+        top: 620px;
+        left: 50px;
+        height: 150px;
+        width: 150px;  
+    }
+    .ele{
+        position: absolute;
+        top: 640px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in; 
+    }
+    .elinfo{
+        position: absolute;
+        top: 670px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .arch{
+        position: absolute;
+        top: 810px;
+        left: 50px;
+        height: 150px;
+        width: 150px;  
+    }
+    .arc{
+        position: absolute;
+        top: 830px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;  
+    }
+    .arinfo{
+        position: absolute;
+        top: 860px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .lbr{
+        position: absolute;
+        top: 1000px;
+        left: 50px;
+        height: 150px;
+        width: 150px;   
+    }
+    .lab{
+        position: absolute;
+        top: 1020px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;  
+    }
+    .lainfo{
+        position: absolute;
+        top: 1050px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .pain{
+        position: absolute;
+        top: 1190px;
+        left: 50px;
+        height: 150px;
+        width: 150px;  
+    }
+    .paint{
+        position: absolute;
+        top: 1210px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;
+    }
+    .painfo{
+        position: absolute;
+        top: 1240px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in;  
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="blue-card">
+            <h2 class="depa">Departments</h2>
+            <h3 class="add">Add Departments <b>+</b></h3>
+            <div class="card">
+                <div class="white-card">
+                    <img class="engin" src="{% static 'engin.png'%}" />
+                    <a class="eng" href="/table"><b>Engineers</b></a>
+                    <p class="eninfo">Department head :- Mr Sanjay Kulkarni <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="plum" src="{% static 'plum.png'%}" />
+                    <a class="plumb" href="/table"><b>Plumbers</b></a>
+                    <p class="plinfo"> Department head :- Mr Pravin Kumar  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="carp" src="{% static 'carp.png'%}" />
+                    <a class="car" href="/table"><b>Carpenters</b></a>
+                    <p class="cainfo"> Department head :- Mr Sanjay Das  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="elec" src="{% static 'elec.png'%}" />
+                    <a class="ele" href="/table"><b>Electricians</b></a>
+                    <p class="elinfo"> Department head :- Mr Prashant Pandey  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="arch" src="{% static 'arch.png'%}" />
+                    <a class="arc" href="/table"><b>Architects</b></a>
+                    <p class="arinfo"> Department head :- Mr Rajesh Shah  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="lbr" src="{% static 'lbr.png'%}" />
+                    <a class="lab" href="/table"><b>Labours</b></a>
+                    <p class="lainfo"> Department head :- Mr Shri Baghat  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="pain" src="{% static 'pain.png'%}" />
+                    <a class="paint" href="/table"><b>Painters</b></a>
+                    <p class="painfo"> Department head :- Mr Sanjay Kulkarni  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

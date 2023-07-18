@@ -1,0 +1,271 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+       .blue-card{
+            position: absolute;
+            width: 113%;
+            height: 110px;
+            background-color: #1C49EABD;
+            left:0px;
+            top: 0px;
+        }
+        .whiteone-card{
+            position: absolute;
+            width: 200px;
+            height: 600px;
+            background-color: white;
+            left: 0px;
+            top: 110px; 
+        }
+        .ivory-card{
+            position: absolute;
+            width: 20px;
+            height: 630px;
+            background-color: #D5DBEF;
+            left: 200px;
+            top: 110px; 
+        }
+        .pista-card{
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            background-color: #D5DBEF;
+            left: 0px;
+            top: 140px;  
+        }
+        .btn-success{
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            height: 70px;
+            width: 150px;
+            color: #1C49EA;
+            background-color: #BFCDF5 !important;
+            border: 2px solid black;
+            border-radius: 25px;
+            font-size: 0.15in;
+            text-decoration: none;
+            text-align: center;
+        }
+        .blueone-card{
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            height: 70px;
+            width: 150px;
+            color: black;
+            background-color: #BFCDF5 !important;
+            border: 2px solid black;
+            border-radius: 25px;
+            font-size: 0.15in;
+        }
+        .bluetwo-card{
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            height: 70px;
+            width: 150px;
+            color: black;
+            background-color: #BFCDF5 !important;
+            border: 2px solid black;
+            border-radius: 25px;
+            font-size: 0.15in;
+        }
+        .noof{
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter'; 
+        }
+        .total{
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: black;
+            font-family: 'Inter'; 
+        }
+        .table-class{
+            position: absolute;
+            top: 110px;
+            left: 220px;
+            color: black;
+            height: 80px;
+            width: 1500px;
+            background-color: #BFCDF5;
+        }
+        .header-class{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        .data-class{
+            border: 1px solid black;
+            padding: 15px;
+            background-color: white; 
+        }
+        .mem{
+            color: #1C49EA;
+            text-decoration: none;
+            font-family: 'Inter'; 
+        }
+        .row{
+            position: absolute;
+            top: 700px;
+            left: 250px;
+            color: #1C49EA;
+            text-decoration: none;
+            font-family: 'Inter';
+        }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="blue-card">
+            </div>
+        </div>
+        <div class="card">
+            <div class="whiteone-card">
+                <button type="button" class="btn btn-success">New Folder</button>      
+                <div class="card">
+                    <div class="pista-card">
+                        <div class="card">
+                            <div class="blueone-card">
+                                <p class="noof">No. of employees : 11</p>
+                            </div>
+                        </div>  
+                        <div class="card">
+                            <div class="bluetwo-card">
+                                <p class="total">Total Projects : 5</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>        
+            </div> 
+        </div> 
+        <div class="card">
+            <div class="ivory-card">
+            </div> 
+        </div> 
+        <table class="table-class">
+            <thead>
+              <tr>
+                <th class="header-class">Sr. No.</th>
+                <th class="header-class">Name</th>
+                <th class="header-class">Email</th>
+                <th class="header-class">Phone Number</th>
+                <th class="header-class">Location</th>
+                <th class="header-class">Address</th>
+                <th class="header-class">Aadhar No.</th>
+                <th class="header-class">No. of projects completed</th>
+                <th class="header-class">No. of projects in progress</th>
+                <th class="header-class">No. of holidays in a month</th>
+                <th class="header-class"><a class="mem" href="">Add the column</a></th>
+              </tr>
+            </thead>  
+        </thead>
+        <tbody>
+          <tr>
+            <td class="data-class">1</td>
+            <td class="data-class">Parker Lie</td>
+            <td class="data-class">NA</td>
+            <td class="data-class">9785285223</td>
+            <td class="data-class">Capetown</td>
+            <td class="data-class">123 Street</td>
+            <td class="data-class">1234 4568 2210</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">2</td>
+            <td class="data-class">Alex Hales</td>
+            <td class="data-class">alex@gmail.com</td>
+            <td class="data-class">978520023</td>
+            <td class="data-class">Delhi</td>
+            <td class="data-class">Laxmi nagar</td>
+            <td class="data-class">4456 7895 2200</td>
+            <td class="data-class">3</td>
+            <td class="data-class">2</td>
+            <td class="data-class">1</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">3</td>
+            <td class="data-class">Michel Stark</td>
+            <td class="data-class">NA</td>
+            <td class="data-class">978500003</td>
+            <td class="data-class">Mumbai</td>
+            <td class="data-class">Bhandup</td>
+            <td class="data-class">1234 5678 9101</td>
+            <td class="data-class">3</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">4</td>
+            <td class="data-class">Tom Curran</td>
+            <td class="data-class">tom@gmail.com</td>
+            <td class="data-class">9785201223</td>
+            <td class="data-class">Mumbai</td>
+            <td class="data-class">Bandra</td>
+            <td class="data-class">8855 9966 7777</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">5</td>
+            <td class="data-class">Noah blu</td>
+            <td class="data-class">NA</td>
+            <td class="data-class">9755220013</td>
+            <td class="data-class">Lucknow</td>
+            <td class="data-class">Sarkar Nagar</td>
+            <td class="data-class">1234 4568 2210</td>
+            <td class="data-class">7</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">6</td>
+            <td class="data-class">Elle Doe</td>
+            <td class="data-class">elle@gmail.com</td>
+            <td class="data-class">9722005623</td>
+            <td class="data-class">Hyderabad</td>
+            <td class="data-class">Hazi Ali Square</td>
+            <td class="data-class">8877 1234 5678</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <tr>
+            <td class="data-class">7</td>
+            <td class="data-class">Monish Zaid</td>
+            <td class="data-class">NA</td>
+            <td class="data-class">7893200223</td>
+            <td class="data-class">Rajasthan</td>
+            <td class="data-class">Sambhaji Nagar</td>
+            <td class="data-class">8210 4568 2210</td>
+            <td class="data-class">2</td>
+            <td class="data-class">3</td>
+            <td class="data-class">3</td>
+            <td class="data-class"></td>
+          </tr>
+          <a class="row" href="">Add new row</a></th>
+        </tbody>
+      </table>   
+    </body> 
+</html>   
+{% endblock %}

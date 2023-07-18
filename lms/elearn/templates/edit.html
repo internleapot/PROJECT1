@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        .ivory-card{
+            position: absolute;
+            top: 0px;
+            height: 145%;
+            width: 100%;
+            background-color: #E3E7F2;
+        }
+        .whiteone-card{
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            width: 400px;
+            height: 830px;
+            background-color: white;
+        }
+        .whitetwo-card{
+            position: absolute;
+            top: 50px;
+            left: 770px;
+            width: 400px;
+            height: 830px;
+            background-color: white; 
+        }
+        .aahr{
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre';
+        }
+        #aadhar{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .ltn{
+            position: absolute;
+            top: 140px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre';
+        }
+        #location{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .perm{
+            position: absolute;
+            top: 240px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #permanent{
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .mbl{
+            position: absolute;
+            top: 340px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #mob{
+            position: absolute;
+            top: 400px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .email{
+            position: absolute;
+            top: 440px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #mail{
+            position: absolute;
+            top: 520px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .edu{
+            position: absolute;
+            top: 560px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #qual{
+            position: absolute;
+            top: 620px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .trans{
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre';
+        }
+        #myDropdown{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .travel{
+            position: absolute;
+            top: 140px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #expenses{
+            position: absolute;
+            top: 220px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical;
+        }
+        .mem{
+            position: absolute;
+            top: 260px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #fam{
+            position: absolute;
+            top: 340px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical; 
+        }
+        .work{
+            position: absolute;
+            top: 380px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #exp{
+            position: absolute;
+            top: 440px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical; 
+        }
+        .own{
+            position: absolute;
+            top: 480px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #myDropdownone{
+            position: absolute;
+            top: 540px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical; 
+        }
+        .feed{
+            position: absolute;
+            top: 580px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #myDropdowntwo{
+            position: absolute;
+            top: 640px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical; 
+        }
+        .plz{
+            position: absolute;
+            top: 680px;
+            left: 50px;
+            color: black;
+            font-family: 'Abhaya Libre'; 
+        }
+        #spec{
+            position: absolute;
+            top: 740px;
+            left: 50px;
+            background-color: white;
+            padding: 12px;
+            border: 2px solid black;
+            width: 250px;
+            border-radius: 50px;
+            resize: vertical; 
+        }
+        .btn-danger{
+            position: absolute;
+            top: 930px;
+            left: 900px;
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: #1C49EA !important;
+            border-radius: 25px;
+            font-size: 0.20in;
+        }
+        .btn-light{
+            position: absolute;
+            top: 930px;
+            left: 1010px;
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: #1C49EA !important;
+            border-radius: 25px;
+            font-size: 0.20in;
+        }
+    </style>
+</head>
+<body>
+    <div class="class">
+        <div class="ivory-card">
+            <button type="button" class="btn btn-danger">Save</button> 
+            <button type="button" class="btn btn-light">Cancel</button> 
+                 <div class="card">
+            <div class="whitetwo-card">
+                 <h3 class="trans">What are your transportation facilities?</h3>
+                 <select id="myDropdown">
+                    <option value="option1">-Select One-</option>
+                    <option value="option2">Company Bus</option>
+                    <option value="option3">Having Own Vehicle</option>
+                    <option value="option4">Other</option>
+                  </select>
+                  <h3 class="travel">How do you manage your travelling expenses? </h3>
+                  <input type="text" id="expenses" name="expenses" >
+                  <h3 class="mem">How many members are there in your family?</h3>
+                  <input type="text" id="fam" name="fam" >
+                  <h3 class="work">How much work experience you have ?</h3>
+                  <input type="text" id="exp" name="exp" >
+                  <h3 class="own">Do you have your own home?</h3>
+                  <select id="myDropdownone">
+                    <option value="option1">-Select One-</option>
+                    <option value="option2">Yes</option>
+                    <option value="option3">No</option>
+                  </select>
+                  <h3 class="feed">Feedback</h3>
+                  <select id="myDropdowntwo">
+                    <option value="option1">-Select One-</option>
+                    <option value="option2">Sugession</option>
+                    <option value="option3">Problem</option>
+                    <option value="option4">Problem Solved</option>
+                  </select>
+                  <h3 class="plz">Please Specify</h3>
+                  <input type="text" id="spec" name="spec" >
+                </div>
+            </div>
+           <div class="card">
+            <div class="whiteone-card">
+                <h3 class="aahr">Aadhar No.</h3>
+               <input type="text" id="aadhar" name="aadhar" >
+               <h3 class="ltn">Location</h3>
+               <input type="text" id="location" name="location" >
+               <h3 class="perm">Permanent Address</h3>
+               <input type="text" id="permanent" name="permenent" >
+               <h3 class="mbl">Mobile No.</h3>
+               <input type="text" id="mob" name="mob" >
+               <h3 class="email">Do you have email ? If yes please mention your email id.</h3>
+               <input type="text" id="mail" name="mail" >
+               <h3 class="edu">What are your education qualifications?</h3>
+               <input type="text" id="qual" name="qual" >
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

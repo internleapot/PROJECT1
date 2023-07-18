@@ -1,0 +1,383 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Profile</title>
+    <style>
+        .blue-card{
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background-color: #1C49EABD;
+            left:0px;
+            top: 0px;
+        }
+        .lightblue-card{
+            position: absolute;
+            width: 100%;
+            height: 850px;
+            background-color: #F5F5F5;
+            left:0px;
+            top: 150px;
+        }
+        .ivory-card{
+            position: absolute;
+            width: 1200px;
+            height: 150px;
+            background-color: #BFCDF5;
+            left: 150px;
+            top: 30px;  
+        }
+        .whiteone-card{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            left: 0px;
+            top: 165px;  
+        }
+        .whitetwo-card{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            top: 330px; 
+            right: 1px;
+        }
+        .whitethree-card{
+            position: absolute;
+            width: 400px;
+            height: 630px;
+            background-color: white;
+            left: 420px;
+            top: 1px;
+        }
+        .whitefour-card{
+            position: absolute;
+            width: 360px;
+            height: 630px;
+            background-color: white;
+            left: 840px;
+            top: 1px;
+        }
+        .profile{
+            position: absolute;
+            top: 30px;
+            left: 130px;
+            height: 120px;
+            width: 120px;
+            border-radius: 50px;
+        }
+        .john{
+            position: absolute;
+            top: 135px;
+            left: 125px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .cons{
+            position: absolute;
+            top: 170px;
+            left: 105px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .edit{
+            position: absolute;
+            top: 230px;
+            left: 330px;
+            height: 70px;
+            width: 50px; 
+        }
+        .doc{
+            position: absolute;
+            top: 30px;
+            left: 130px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .aadhar{
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        #myfile{
+            position: absolute;
+            top: 130px;
+            left: 100px;
+        }
+        .certi{
+            position: absolute;
+            top: 160px;
+            left: 100px;
+            color: black;
+            font-family: Abhaya Libre; 
+        }
+        #degree{
+            position: absolute;
+            top: 210px;
+            left: 100px;
+        }
+        .btn-success{
+            position: absolute;
+            top: 250px;
+            left: 270px;
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: #1C49EA !important;
+            border-radius: 25px;
+           font-size: 0.20in;
+        }
+        .ahr{
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter';   
+        }
+        .greyone-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 20px;
+            top: 90px; 
+        }
+        .loca{
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            color: black;
+            font-family: 'Inter'; 
+        }
+        .greytwo-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 10px;
+            top: 90px; 
+        }
+        .perm{
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .greythree-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 90px; 
+        }
+        .mob{
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';   
+        }
+        .greyfour-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 90px;
+        }
+        .mail{
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .greyfive-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 130px;
+        }
+        .fam{
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .greyfive-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 130px;
+        }
+        .transp{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: black;
+            font-family: 'Inter';    
+        }
+        .greyseven-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 30px;
+            top: 120px; 
+        }
+        .plz{
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .greyeight-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 110px;  
+        }
+        .manage{
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            color: black;
+            font-family: 'Inter';
+        }
+        .greynine-card{
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #A6A1A1;
+            border: 3px solid #A6A1A1;
+            border-radius: 50px;
+            left: 0px;
+            top: 130px;
+        }
+        .btn-danger{
+            position: absolute;
+            top: 70px;
+            left: 190px;
+            height: 40px;
+            width: 100px;
+            color: black;
+            background-color: #1C49EA !important;
+            border-radius: 25px;
+           font-size: 0.20in;
+           text-decoration: none;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="blue-card">
+        </div>
+    </div>
+    <div class="card">
+        <div class="lightblue-card">
+            <div class="card">
+                <div class="ivory-card">
+                    <div class="card">
+                        <div class="whiteone-card">
+                            <img class="profile" src="{% static 'profile.png'%}" />
+                            <h2 class="john"><b>JOHN DOE</b></h2> 
+                            <h3 class="cons">Construction, Labour<br>
+                            Mumbai, Maharashtra</h3>
+                            <a class="edit" href="/profileform">
+                                <img src="{% static 'add.png'%}" />
+                            </a>
+                            <div class="card">
+                                    <div class="whitetwo-card">
+                                        <h2 class="doc"><b>Documents</b></h2>
+                                        <h3 class="aadhar">Aadhar Card</h3>  
+                                            <form action= "POST" >
+                                            <input type="file" id="myfile" name="myfile"> 
+                                            <h3 class="certi">Degree certificates if any?</h3>   
+                                            <input type="file" id="degree" name="degree"> 
+                                            <button type="button" class="btn btn-success">Save</button>  
+                                        </form> 
+                                        </div>
+                                       </div>  
+                                       <div class="card">
+                                        <div class="whitethree-card">
+                                            <h3 class="ahr">Aadhar No.</h3>
+                                            <div class="greyone-card">
+                                                <h3 class="loca">Location</h3>
+                                                <div class="greytwo-card">
+                                                    <h3 class="perm">Permanent Address</h3>
+                                                    <div class="greythree-card">
+                                                        <h3 class="mob">Mobile Number</h3>
+                                                        <div class="greyfour-card">
+                                                            <h3 class="mail">Do you have email ? If yes please
+                                                                 mention your email id </h3>
+                                                                 <div class="greyfive-card">
+                                                                    <h3 class="fam">How many members are there in your family ?</h3>
+                                                                    <div class="greysix-card"> 
+                                                            </div>        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>       
+                                    </div>    
+                                </div>
+                                <div class="card">
+                                    <div class="whitefour-card">
+                                        <h3 class="transp">What are your transportation<br>
+                                             facilities ?</h3> 
+                                             <div class="greyseven-card"> 
+                                                <h3 class="plz">Please Specify ?<h3> 
+                                                    <div class="greyeight-card">
+                                                     <h4 class="manage">How do you manage your travelling expenses?</h4> 
+                                                     <div class="greynine-card">
+                                                        <a class="btn btn-danger" href="/edit"> Edit </a>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

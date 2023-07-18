@@ -1,0 +1,342 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Info</title>
+    <style>
+        .blue-card{
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background-color: #1C49EABD;
+            left:0px;
+            top: 0px;
+        }
+        .lightblue-card{
+            position: absolute;
+            width: 100%;
+            height: 850px;
+            background-color: #F5F5F5;
+            left:0px;
+            top: 150px;
+        }
+        .ivory-card{
+            position: absolute;
+            width: 820px;
+            height: 150px;
+            background-color: #BFCDF5;
+            left: 350px;
+            top: 30px;  
+        }
+        .whiteone-card{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            left: 0px;
+            top: 165px;  
+        }
+        .whitetwo-card{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            top: 330px; 
+            right: 1px;
+        }
+        .whitethree-card{
+            position: absolute;
+            width: 400px;
+            height: 630px;
+            background-color: white;
+            left: 420px;
+            top: 1px;
+        }
+        .profile{
+            position: absolute;
+            top: 30px;
+            left: 130px;
+            height: 120px;
+            width: 120px;
+            border-radius: 50px;
+        }
+        .john{
+            position: absolute;
+            top: 135px;
+            left: 125px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .cons{
+            position: absolute;
+            top: 170px;
+            left: 105px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .edit{
+            position: absolute;
+            top: 230px;
+            left: 330px;
+            height: 70px;
+            width: 50px; 
+        }
+        .aadhar{
+            position: absolute;
+            top: 50px;
+            left: 60px;
+            color: black;
+            font-family: Abhaya Libre;
+        }
+        .house{
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            color: black;
+            font-family: Abhaya Libre;
+            text-decoration: underline;
+            border-bottom-width: 2px;
+        }
+        .certi{
+            position: absolute;
+            top: 150px;
+            left: 60px;
+            color: black;
+            font-family: Abhaya Libre; 
+        }
+        .mumbai{
+            position: absolute;
+            top: 200px;
+            left: 60px;
+            color: black;
+            font-family: Abhaya Libre;
+            text-decoration: underline;
+            border-bottom-width: 2px;
+        }
+        .ahr{
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter';
+        }
+        .sun{
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline;
+            border-bottom-width: 2px; 
+        }
+        .perm{
+            position: absolute;
+            top: 95px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .mob{
+            position: absolute;
+            top: 125px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline; 
+            border-bottom-width: 2px; 
+        }
+        .mail{
+            position: absolute;
+            top: 170px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .one{
+            position: absolute;
+            top: 220px;
+            height: 25px;
+            width: 30px;
+            left: 20px;
+        }
+        .lone{
+            position: absolute;
+            top: 200px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline;     
+        }
+        .two{
+            position: absolute;
+            top: 260px;
+            height: 25px;
+            width: 30px;
+            left: 20px; 
+        }
+        .ltwo{
+            position: absolute;
+            top: 240px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline; 
+        }
+        .three{
+            position: absolute;
+            top: 300px;
+            height: 25px;
+            width: 30px;
+            left: 20px;
+        }
+        .lthree{
+            position: absolute;
+            top: 280px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline;  
+        }
+        .elec{
+            position: absolute;
+            top: 330px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter'; 
+        }
+        .four{
+            position: absolute;
+            top: 380px;
+            height: 25px;
+            width: 30px;
+            left: 20px;
+        }
+        .eone{
+            position: absolute;
+            top: 360px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline; 
+        }
+        .five{
+            position: absolute;
+            top: 420px;
+            height: 25px;
+            width: 30px;
+            left: 20px; 
+        }
+        .etwo{
+            position: absolute;
+            top: 400px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline; 
+        }
+        .plum{
+            position: absolute;
+            top: 450px;
+            left: 40px;
+            color: black;
+            font-family: 'Inter';  
+        }
+        .six{
+            position: absolute;
+            top: 500px;
+            height: 25px;
+            width: 30px;
+            left: 20px; 
+        }
+        .pone{
+            position: absolute;
+            top: 480px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline;  
+        }
+        .seven{
+            position: absolute;
+            top: 540px;
+            height: 25px;
+            width: 30px;
+            left: 20px;
+        }
+        .ptwo{
+            position: absolute;
+            top: 520px;
+            left: 60px;
+            color: black;
+            font-family: 'Inter'; 
+            text-decoration: underline;  
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="blue-card">
+        </div> 
+    </div>
+    <div class="card">
+        <div class="lightblue-card">
+            <div class="card">
+                <div class="ivory-card">
+                    <div class="card">
+                        <div class="whiteone-card">
+                            <img class="profile" src="{% static 'profile.png'%}" />
+                            <h2 class="john"><b>Alex John</b></h2> 
+                            <h3 class="cons">Mumbai, Maharashtra</h3>
+                            <a class="edit" href="/profileform">
+                                <img src="{% static 'add.png'%}" />
+                            </a>
+                            <div class="card">
+                                    <div class="whitetwo-card">
+                                        <h2 class="aadhar">Work Done</h2>  
+                                            <h3 class="house">House Construction</h3> 
+                                            <h2 class="certi">Location</h2>   
+                                            <h3 class="mumbai">Mumbai, Maharashtra</h3> 
+                                        </div>
+                                       </div>  
+                                       <div class="card">
+                                        <div class="whitethree-card">
+                                            <h3 class="ahr">Engineer</h3>
+                                                <h3 class="sun">John Son</h3>
+                                                    <h3 class="perm">Architect</h3>
+                                                    <h3 class="mob">Charvi Moon</h3>
+                                                        <h3 class="mail">List of Labours</h3>
+                                                        <img class="one" src="{% static 'members.png'%}" />
+                                                        <h3 class="lone">11</h3>
+                                                        <img class="two" src="{% static 'members.png'%}" />
+                                                        <h3 class="ltwo">12</h3>
+                                                        <img class="three" src="{% static 'members.png'%}" />
+                                                        <h3 class="lthree">13</h3>
+                                                        <h3 class="elec">Electrician</h3> 
+                                                        <img class="four" src="{% static 'members.png'%}" />
+                                                        <h3 class="eone">11</h3>
+                                                        <img class="five" src="{% static 'members.png'%}" />
+                                                        <h3 class="etwo">12</h3>
+                                                        <h3 class="plum">Plumber</h3>
+                                                        <h3 class="pone">11</h3>
+                                                        <img class="six" src="{% static 'members.png'%}" />
+                                                        <h3 class="ptwo">12</h3>
+                                                        <img class="seven" src="{% static 'members.png'%}" />
+                                                </div>
+                                         </div>       
+                                    </div>    
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

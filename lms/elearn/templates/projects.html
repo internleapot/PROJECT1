@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects </title>
+    <style>
+    .blue-card{
+        position: absolute;
+        height: 90px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #1C49EABD;
+    }
+    .depa{
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        color: black;
+        font-family: 'Inter';
+    }
+    .add{
+        position: absolute;
+        top: 5px;
+        left: 1250px;
+        color: white;
+        font-family: 'Inter';
+        border: 4px solid black;
+        padding: 10px;
+    }
+    .white-card{
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        height: 800px;
+        width: 100%;
+        background-color: white;
+    }
+    .house{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        height: 150px;
+        width: 150px; 
+    }
+    .hus{
+        position: absolute;
+        top: 70px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;
+    }
+    .huinfo{
+        position: absolute;
+        top: 100px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .ofc{
+        position: absolute;
+        top: 240px;
+        left: 50px;
+        height: 150px;
+        width: 150px;  
+    }
+    .office{
+        position: absolute;
+        top: 260px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in;
+    }
+    .ofinfo{
+        position: absolute;
+        top: 290px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in; 
+    }
+    .society{
+        position: absolute;
+        top: 430px;
+        left: 50px;
+        height: 150px;
+        width: 150px;   
+    }
+    .soc{
+        position: absolute;
+        top: 450px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        text-decoration: none;
+        font-size: 0.25in; 
+    }
+    .soinfo{
+        position: absolute;
+        top: 480px;
+        left: 280px;
+        color: black;
+        font-family: 'Inter';
+        font-size: 0.19in;   
+    }
+    .btn-success{
+        position: absolute;
+        top: 650px;
+        left: 680px;
+        height: 40px;
+        width: 150px;
+        color: black;
+        background-color: #1C49EA !important;
+        border-radius: 25px;
+        font-size: 0.20in;
+        text-decoration: none;
+        text-align: center;
+        border: 2px solid black;
+    }
+        </style>
+</head>
+<body>
+    <div class="card">
+        <div class="blue-card">
+            <h2 class="depa">Projects</h2>
+            <h3 class="add">Add Projects <b>+</b></h3>
+            <div class="card">
+                <div class="white-card">
+                    <img class="house" src="{% static 'house.png'%}" />
+                    <a class="hus" href=""><b>House Construction</b></a>
+                    <p class="huinfo">Department head :- Mr Sanjay Kulkarni <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="ofc" src="{% static 'ofc.png'%}" />
+                    <a class="office" href=""><b>Office Construction</b></a>
+                    <p class="ofinfo"> Department head :- Mr Pravin Kumar  <br>
+                    <br>
+                    Total employees :- 15</p>
+
+                    <img class="society" src="{% static 'society.png'%}" />
+                    <a class="soc" href=""><b>Society Construction</b></a>
+                    <p class="soinfo"> Department head :- Mr Sanjay Das  <br>
+                    <br>
+                    Total employees :- 15</p>
+                    <button type="button" class="btn btn-success">Load More</button>
+                </div>    
+            </div>
+        </div>
+    </div>         
+</body>        
+</html>
+{% endblock %}
